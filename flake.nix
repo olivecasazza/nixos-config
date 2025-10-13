@@ -58,7 +58,7 @@
         # change to your preferred settings
         name = "casazza";
         fullName = "Olive Casazza";
-        email = "olive.casazza@schrodinger.com";
+        email = "olive@casazza.info";
       };
       linuxSystems = [
         "x86_64-linux"
@@ -84,7 +84,7 @@
                 nh
               ];
               shellHook = with pkgs; ''
-                export EDITOR=nvim
+                export EDITOR=micro
               '';
             };
         };

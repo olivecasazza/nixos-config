@@ -1,12 +1,11 @@
 { pkgs, lib }:
 
 {
-  # Editor settings - Neovim-like preferences
   "editor.fontFamily" = "JetBrains Mono";
   "editor.fontSize" = 14;
   "editor.lineHeight" = 1.5;
   "editor.fontLigatures" = true;
-  "editor.formatOnSave" = false;  # Manual formatting control like Neovim
+  "editor.formatOnSave" = false; 
   "editor.formatOnPaste" = false;
   "editor.tabSize" = 2;
   "editor.insertSpaces" = true;
@@ -33,16 +32,12 @@
   "workbench.colorTheme" = "Sublime Material Theme - Dark";
 
   # "workbench.iconTheme" = "material-icon-theme";
-  "workbench.editor.enablePreview" = false;  # More decisive file opening like Neovim
+  "workbench.editor.enablePreview" = false;
   "workbench.editor.closeOnFileDelete" = true;
   "workbench.secondarySideBar.defaultVisibility" = "hidden";
-
-  # File settings - Neovim-style
-  "files.trimTrailingWhitespace" = true;  # Common in Neovim configs
+  "files.trimTrailingWhitespace" = true;  
   "files.insertFinalNewline" = true;  # Unix standard
   "files.trimFinalNewlines" = true;
-  # "files.autoSave" = "afterDelay";  # Disabled for manual save control like Neovim
-  # "files.autoSaveDelay" = 1000;
 
   # Search settings
   "search.exclude" = {

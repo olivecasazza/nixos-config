@@ -1,14 +1,12 @@
 { pkgs }:
 
 with pkgs.vscode-extensions; [
-  vscodevim.vim
   hashicorp.terraform
   yzhang.markdown-all-in-one
   ms-vscode-remote.vscode-remote-extensionpack
   ms-toolsai.datawrangler
   esbenp.prettier-vscode
   pkief.material-icon-theme
-  # saoudrizwan.claude-dev
 ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
   {
     name = "claude-dev";
