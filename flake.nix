@@ -152,5 +152,11 @@
           ];
         }
       );
+
+      # Build the supported Linux system closure as the x86_64 Buildbot gate.
+      # This reuses the evaluated NixOS output; no synthetic derivation or
+      # unsupported Darwin check is introduced.
+      checks.x86_64-linux.nixos-system =
+        nixosConfigurations.x86_64-linux.config.system.build.toplevel;
     };
 }
