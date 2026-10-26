@@ -74,7 +74,14 @@ nix --extra-experimental-features 'nix-command flakes' build .#darwinConfigurati
 cachix push na-son ./result
 ```
 
-## Caveats
+## Nix CI and Hydra
+
+The flake exposes `checks.x86_64-linux.nixos-system` and
+`hydraJobs.x86_64-linux.nixos-system` as the same
+`nixosConfigurations.x86_64-linux.config.system.build.toplevel`
+derivation. Buildbot gates the supported Linux system closure; Hydra is the
+canonical artifact producer while its service is healthy or being restored.
+The existing Darwin and aarch64 configuration outputs remain unchanged.
 
 You may need to configure git for the root to trust this directory:
 
