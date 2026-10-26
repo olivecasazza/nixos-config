@@ -157,6 +157,10 @@
       # This reuses the evaluated NixOS output; no synthetic derivation or
       # unsupported Darwin check is introduced.
       checks.x86_64-linux.nixos-system =
-        nixosConfigurations.x86_64-linux.config.system.build.toplevel;
+        self.nixosConfigurations.x86_64-linux.config.system.build.toplevel;
+      # Hydra's canonical Linux artifact is the same NixOS system closure.
+      # Darwin and aarch64 configuration outputs remain unchanged.
+      hydraJobs.x86_64-linux.nixos-system =
+        self.nixosConfigurations.x86_64-linux.config.system.build.toplevel;
     };
 }
